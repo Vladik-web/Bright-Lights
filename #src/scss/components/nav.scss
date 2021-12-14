@@ -1,0 +1,26 @@
+.nav {
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 56px;
+    }
+  }
+  &__link {
+    color: $white;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    &:hover,
+    &:focus {
+      color: darken($color: $white, $amount: 20%);
+    }
+    &:active {
+      color: darken($color: $white, $amount: 50%);
+    }
+  }
+}

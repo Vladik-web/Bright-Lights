@@ -1,0 +1,31 @@
+@import "reset.scss";
+@import "fonts.scss";
+@import "vars.scss";
+@import "mixins.scss";
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  background-color: $bg;
+  color: $white;
+}
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.btn {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "./components/page-intro.scss";
+@import "./components/header.scss";
+@import "./components/nav.scss";
