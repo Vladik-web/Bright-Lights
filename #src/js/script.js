@@ -8,3 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
     mainBg.style.backgroundPosition = `center ${scroll / 2}px`;
   });
 });
+
+@@include('writer.js')
