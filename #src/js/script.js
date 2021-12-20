@@ -13,3 +13,4 @@ document.addEventListener("DOMContentLoaded", () => {
 @@include('writer.js')
 @@include('about-us-slider.js')
 @@include('tracks.js')
+@@include('slider.js')
