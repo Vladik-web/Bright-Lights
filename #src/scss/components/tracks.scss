@@ -1,0 +1,109 @@
+.tracks {
+  margin-bottom: 180px;
+  &__inner {
+    display: flex;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__image {
+    position: relative;
+
+    img {
+      display: block;
+      border-radius: 50%;
+      width: 434.44px;
+      height: 434.44px;
+    }
+    &::before,
+    &::after {
+      content: "";
+      z-index: -1;
+      opacity: 0.6;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 473px;
+      height: 473px;
+      border-radius: 50%;
+      background-color: $accent;
+      transform: translate(-50%, -50%);
+    }
+    &::before {
+      animation: pulse 1s ease infinite alternate backwards;
+      width: 510px;
+      height: 510px;
+      opacity: 0.3;
+    }
+    &::after {
+      animation: pulse 0.5s ease infinite alternate backwards;
+    }
+  }
+  &__right {
+  }
+  &__head {
+    margin-bottom: 60px;
+  }
+  &__list {
+    margin: 50px 0;
+  }
+  &__item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .number {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+      opacity: 0.5;
+      width: 19px;
+    }
+    &.active {
+      & span:last-child {
+        color: $accent;
+        font-weight: 600;
+      }
+    }
+  }
+  &__follow {
+    display: flex;
+    column-gap: 40px;
+    p {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+    }
+    &-item {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      img {
+        display: block;
+      }
+      column-gap: 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+@keyframes pulse {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
