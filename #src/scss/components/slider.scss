@@ -1,5 +1,7 @@
 .slider {
   width: 100%;
+  position: relative;
+
   .swiper {
     width: 100%;
   }
@@ -64,5 +66,23 @@
     background-color: $accent;
     border-radius: $border;
     padding: 18px 62px 18px 52px;
+  }
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+
+    width: 40px;
+    height: 60px;
+    border: 1px solid $white;
+    background-color: transparent;
+    border-radius: 10px 0px;
+    transform: translateY(-50%);
+  }
+  &__prev {
+    left: -50px;
+  }
+  &__next {
+    right: -80px;
   }
 }
