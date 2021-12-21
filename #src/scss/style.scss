@@ -2,9 +2,12 @@
 @import "fonts.scss";
 @import "vars.scss";
 @import "mixins.scss";
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
+  position: relative;
   scroll-behavior: smooth;
   font-style: normal;
   font-weight: normal;
@@ -50,3 +53,4 @@ body {
 @import "./components/tracks.scss";
 @import "./components/gallery.scss";
 @import "./components/slider.scss";
+@import "./components/footer.scss";

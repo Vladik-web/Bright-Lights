@@ -1,16 +1,13 @@
 .slider {
   width: 100%;
   position: relative;
+  padding: 90px 0;
 
-  .swiper {
-    width: 100%;
-  }
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &__wrapper {
+    position: relative;
   }
   &__item {
+    margin: 0 15px;
     max-width: 350px;
     background: #2f2b2b;
     border-radius: $border;
@@ -18,10 +15,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
   }
   &__image {
     height: 280px;
+    overflow: hidden;
     img {
+      transition: 0.2s ease;
       width: 100%;
       height: 280px;
     }
@@ -61,26 +65,48 @@
     text-transform: uppercase;
     color: $white;
     font-weight: bold;
+    align-items: center;
     font-size: 16px;
     line-height: 24px;
     background-color: $accent;
     border-radius: $border;
     padding: 18px 62px 18px 52px;
+    transition: 0.2s ease;
+    &:hover {
+      background-color: darken($accent, 5%);
+    }
+    &:active {
+      background-color: darken($accent, 10%);
+    }
   }
   &__prev,
   &__next {
     position: absolute;
     top: 50%;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
     width: 40px;
     height: 60px;
+    z-index: 100;
     border: 1px solid $white;
+    opacity: 0.5;
+    transition: 0.2s ease;
     background-color: transparent;
     border-radius: 10px 0px;
+    cursor: pointer;
     transform: translateY(-50%);
+    &:hover {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.05);
+    }
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
   }
   &__prev {
-    left: -50px;
+    left: -80px;
   }
   &__next {
     right: -80px;

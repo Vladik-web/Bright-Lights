@@ -1,0 +1,129 @@
+.footer {
+  padding: 80px 0 40px 0;
+  &__inner {
+    max-width: 530px;
+    margin: 0 auto;
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__contacts {
+    margin-bottom: 60px;
+    ul {
+      li {
+        display: flex;
+        gap: 30px;
+        span {
+          display: block;
+          flex: 1 0 40%;
+          & + span {
+            flex: 1 0 60%;
+          }
+        }
+        list-style: none;
+      }
+    }
+  }
+  &__contacts-who {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  &__contacts-text {
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+  }
+  &__links {
+    margin-bottom: 100px;
+    max-width: 510px;
+  }
+  &__links-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__links-item {
+    perspective: 1000px;
+    list-style: none;
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      background: #2c2c2c;
+      border-radius: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+    }
+
+    &:nth-child(1) {
+      animation: flip 1.4s ease backwards infinite alternate;
+      animation-delay: 1s;
+    }
+    &:nth-child(2) {
+      animation: flip 1s ease backwards infinite alternate;
+    }
+    &:nth-child(3) {
+      animation: flip 1.4s ease backwards infinite alternate;
+      animation-delay: 1s;
+    }
+    &:nth-child(4) {
+      animation: flip 1s ease backwards infinite alternate;
+    }
+    &:nth-child(5) {
+      animation: flip 1.4s ease backwards infinite alternate;
+      animation-delay: 1s;
+    }
+    &:nth-child(6) {
+      animation: flip 1s ease backwards infinite alternate;
+    }
+    &:hover {
+      animation: none;
+
+      transform: scale(1.2);
+    }
+  }
+  &__links-link {
+    font-size: 0;
+    line-height: 0;
+    border-radius: 50%;
+    background-color: $accent;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__cop {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $white;
+    opacity: 0.5;
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}

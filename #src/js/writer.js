@@ -15,9 +15,7 @@ function writing(text) {
     }
     field.textContent += massText[index];
     index++;
-  }, getRandomArbitrary(settings.min, settings.max));
+  }, 200);
 }
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
-}
+
 writing(settings.text);
