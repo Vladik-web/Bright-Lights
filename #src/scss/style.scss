@@ -11,10 +11,14 @@ body {
   scroll-behavior: smooth;
   font-style: normal;
   font-weight: normal;
+  overflow-x: hidden;
   font-size: 18px;
   line-height: 27px;
   background-color: $bg;
   color: $white;
+  &.active {
+    overflow: hidden;
+  }
 }
 .container {
   max-width: 1140px;
@@ -36,6 +40,13 @@ body {
   margin-bottom: 10px;
   img {
     margin-right: 30px;
+  }
+  @media (max-width: 767px) {
+    font-size: 39px;
+    margin-bottom: 0;
+  }
+  @media (max-width: 540px) {
+    font-size: 30px;
   }
 }
 .left {

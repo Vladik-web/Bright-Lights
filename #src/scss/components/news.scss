@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    @media (max-width: 650px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
   &__card {
     position: relative;
@@ -14,8 +18,9 @@
       left: 0;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
-    flex: 1 0 350px;
+    flex: 1 1 350px;
     border-radius: $border;
     overflow: hidden;
     min-height: 300px;
@@ -28,6 +33,15 @@
         border-radius: initial;
       }
     }
+    @media (max-width: 767px) {
+      min-height: 200px;
+    }
+    @media (max-width: 650px) {
+      flex: 0 1 47%;
+    }
+    @media (max-width: 540px) {
+      flex: 1 1 100%;
+    }
   }
   &__card-text {
     position: relative;
@@ -36,10 +50,22 @@
     padding: 20px;
     background: rgba($accent, 0.7);
     border-radius: $border;
+    @media (max-width: 767px) {
+      padding: 15px;
+      text-align: center;
+    }
+    @media (max-width: 767px) {
+      padding: 20px;
+      text-align: center;
+    }
     h3 {
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
+      @media (max-width: 767px) {
+        font-size: 13px;
+        line-height: 1.3;
+      }
     }
   }
 }
