@@ -1,6 +1,10 @@
 .text {
   padding-top: 165px;
   padding-bottom: 118px;
+  @media (max-width: 1023px) {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
   &__inner {
     padding: 50px 80px;
     width: 100%;
@@ -8,16 +12,24 @@
     border: 1px solid $white;
     border-radius: $border;
     display: flex;
+    column-gap: 30px;
     align-items: center;
     justify-content: space-between;
-
+    @media (max-width: 1023px) {
+      flex-direction: column-reverse;
+      height: auto;
+      row-gap: 30px;
+      padding: 25px 40px;
+    }
     &-left {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       max-width: 520px;
-
+      @media (max-width: 1023px) {
+        max-width: 100%;
+      }
       p {
         padding-bottom: 25px;
         border-bottom: 1px solid rgba($white, 0.6);
@@ -32,6 +44,15 @@
           background: url("../img/icons/before.svg") no-repeat center center /
             cover;
         }
+        @media (max-width: 424px) {
+          font-size: 15px;
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          &::before {
+            width: 51.5px;
+            height: 46px;
+          }
+        }
       }
       a {
         font-weight: bold;
@@ -43,8 +64,16 @@
       img {
         border-radius: $border;
         transition: 0.2s ease;
+        @media (max-width: 424px) {
+          width: 100%;
+        }
         &:hover {
           transform: scale(1.1) translateY(-30px);
+        }
+        @media (max-width: 1023px) {
+          &:hover {
+            transform: scale(1) translateY(0);
+          }
         }
       }
     }

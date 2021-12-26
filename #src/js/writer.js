@@ -1,7 +1,6 @@
 const settings = {
   text: "War For Love!",
-  min: 100,
-  max: 300,
+  value: 100,
 };
 const field = document.querySelector(".intro__title");
 function writing(text) {
@@ -15,7 +14,7 @@ function writing(text) {
     }
     field.textContent += massText[index];
     index++;
-  }, 200);
+  }, settings.value);
 }
 
 writing(settings.text);

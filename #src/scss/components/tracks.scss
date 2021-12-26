@@ -1,8 +1,16 @@
 .tracks {
   padding-top: 165px;
   padding-bottom: 90px;
+  @media screen and (max-width: 1023px) {
+    padding-top: 85px;
+  }
   &__inner {
     display: flex;
+    gap: 20px;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
   }
   &__left {
     display: flex;
@@ -17,6 +25,10 @@
       border-radius: 50%;
       width: 434.44px;
       height: 434.44px;
+      @media screen and (max-width: 600px) {
+        width: 200.44px;
+        height: 200.44px;
+      }
     }
     &::before,
     &::after {
@@ -26,16 +38,16 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 473px;
-      height: 473px;
+      width: 110%;
+      height: 110%;
       border-radius: 50%;
       background-color: $accent;
       transform: translate(-50%, -50%);
     }
     &::before {
       animation: pulse 1s ease infinite alternate backwards;
-      width: 510px;
-      height: 510px;
+      width: 120%;
+      height: 120%;
       opacity: 0.3;
     }
     &::after {
@@ -55,6 +67,7 @@
     display: flex;
     align-items: center;
     gap: 17px;
+    transition: 0.2s ease;
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -65,16 +78,29 @@
       opacity: 0.5;
       width: 19px;
     }
+    span {
+      @media screen and (max-width: 1023px) {
+        font-size: 16px;
+      }
+    }
     &.active {
       & span:last-child {
         color: $accent;
         font-weight: 600;
       }
     }
+    &:hover:not(.active) {
+      transform: translateX(10px);
+
+      color: lighten(#7a66cc, 20);
+    }
   }
   &__follow {
     display: flex;
     column-gap: 40px;
+    @media screen and (max-width: 374px) {
+      column-gap: 20px;
+    }
     p {
       font-weight: 600;
       font-size: 24px;
@@ -84,6 +110,9 @@
       display: flex;
       align-items: center;
       column-gap: 30px;
+      @media screen and (max-width: 374px) {
+        column-gap: 10px;
+      }
     }
     &-item {
       color: #fff;

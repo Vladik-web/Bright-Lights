@@ -6,6 +6,15 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     grid-template-rows: repeat(2, 250px);
+    @media (max-width: 1023px) {
+      grid-template-rows: repeat(2, 150px);
+      gap: 15px;
+      font-size: 15px;
+    }
+    @media (max-width: 767px) {
+      grid-template-rows: repeat(4, 150px);
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__item {
     cursor: pointer;
@@ -17,6 +26,7 @@
     overflow: hidden;
     img {
       position: absolute;
+      object-fit: cover;
       top: 0;
       left: 0;
       width: 100%;
@@ -61,6 +71,25 @@
       z-index: 10;
       font-size: 24px;
       line-height: 36px;
+      @media (max-width: 1023px) {
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 767px) {
+      &:nth-child(1) {
+        grid-row: 1/4;
+      }
+      &:nth-child(3) {
+        grid-row: 4/5;
+      }
+      &:nth-child(4) {
+        grid-row: 2/3;
+        grid-column: 2/3;
+      }
+      &:last-child {
+        grid-row: 3/5;
+        grid-column: 2/3;
+      }
     }
   }
 }

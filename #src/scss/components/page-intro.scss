@@ -28,7 +28,9 @@
 .intro {
   padding-top: 432px;
   margin-bottom: 130px;
-
+  @media (max-width: 1023px) {
+    margin-bottom: 65px;
+  }
   &__title {
     font-weight: bold;
     font-size: 100px;

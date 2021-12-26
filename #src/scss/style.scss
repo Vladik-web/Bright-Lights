@@ -40,7 +40,11 @@ body {
   margin-bottom: 10px;
   img {
     margin-right: 30px;
+    @media (max-width: 1023px) {
+      margin-right: 10px;
+    }
   }
+
   @media (max-width: 767px) {
     font-size: 39px;
     margin-bottom: 0;
@@ -50,10 +54,10 @@ body {
   }
 }
 .left {
-  flex: 1 0 50%;
+  flex: 1 1 50%;
 }
 .right {
-  flex: 1 0 50%;
+  flex: 1 1 50%;
 }
 @import "./components/page-intro.scss";
 @import "./components/header.scss";
