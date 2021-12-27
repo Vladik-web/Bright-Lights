@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (document.documentElement && document.documentElement.scrollTop) ||
       (document.body && document.body.scrollTop);
     mainBg.style.backgroundPosition = `center ${scroll / 2}px`;
+    
 	
   });
 });

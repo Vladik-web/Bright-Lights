@@ -1,8 +1,14 @@
 .footer {
   padding: 80px 0 40px 0;
+  @media screen and (max-width: 767px) {
+    padding: 40px 0 10px 0;
+  }
   &__inner {
     max-width: 530px;
     margin: 0 auto;
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+    }
   }
   &__logo {
     display: flex;
@@ -22,8 +28,18 @@
           & + span {
             flex: 1 0 60%;
           }
+          @media screen and (max-width: 767px) {
+            flex: 1 1 100%;
+            align-self: center;
+          }
         }
         list-style: none;
+        @media screen and (max-width: 767px) {
+          gap: 0px;
+        }
+        @media screen and (max-width: 424px) {
+          flex-direction: column;
+        }
       }
     }
   }
@@ -33,6 +49,9 @@
     line-height: 27px;
     text-align: right;
     text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      text-align: left;
+    }
   }
   &__contacts-text {
     font-size: 18px;
@@ -42,11 +61,18 @@
   &__links {
     margin-bottom: 100px;
     max-width: 510px;
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
   }
   &__links-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
   }
   &__links-item {
     perspective: 1000px;
@@ -91,6 +117,23 @@
       animation: none;
 
       transform: scale(1.2);
+    }
+    @media screen and (max-width: 767px) {
+      flex: 0 0 33.333%;
+      display: flex;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        transform: scale(1);
+      }
+
+      &:nth-child(n) {
+        animation: none;
+      }
+    }
+    @media screen and (max-width: 424px) {
+      flex: 0 1 50%;
     }
   }
   &__links-link {

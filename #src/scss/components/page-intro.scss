@@ -54,10 +54,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 47px;
-    @media (max-width: 767px) {
-      max-width: 500px;
-      margin: 0 auto;
-    }
+
     @media (max-width: 424px) {
       gap: 20px;
     }
